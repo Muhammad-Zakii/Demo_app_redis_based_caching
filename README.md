@@ -39,6 +39,15 @@ Create a .env.local file in the root directory and add the following:
 ```bash
 npm run dev
 ```
+## 🧠 How Redis Caching Works
+
+On first load, the app fetches product data from the API and stores it in Redis for **120 seconds**. During that period, any new request will be served directly from the Redis cache, significantly speeding up the response and reducing the number of API calls.
+
+### ✅ Benefits of Caching
+
+- Faster response times for repeated requests  
+- Reduced load on the external API  
+- Better scalability for future growth
 
 
 
